@@ -1,0 +1,10 @@
+#! /bin/sh
+#
+# Created by configure
+
+"./configure" \
+"--prefix=/app/apache" \
+"--enable-rewrite" \
+"--enable-proxy" \
+"--enable-proxy-http" \
+"$@"
