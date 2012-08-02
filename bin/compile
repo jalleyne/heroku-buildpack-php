@@ -49,7 +49,6 @@ ln -s /php/bin/php bin/php
 cd "/"
 
 cat >>boot.sh <<EOF
-ls
 for var in \`env|cut -f1 -d=\`; do
   echo "PassEnv \$var" >> /apache/conf/httpd.conf;
 done
