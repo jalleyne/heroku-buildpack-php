@@ -20,6 +20,8 @@ shopt -s dotglob
 
 cd $BUILD_DIR
 
+echo $BUILD_DIR
+
 # move app things to www
 mkdir -p $CACHE_DIR/www
 mv * $CACHE_DIR/www
@@ -57,7 +59,7 @@ tail -F /apache/logs/access_log &
 export LD_LIBRARY_PATH=/php/ext
 export PHP_INI_SCAN_DIR=/www
 echo "Launching apache"
-exec ../apache/bin/httpd -DNO_DETACH
+exec /apache/bin/httpd -DNO_DETACH
 EOF
 
 chmod +x boot.sh
