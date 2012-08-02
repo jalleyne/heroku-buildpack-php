@@ -57,7 +57,7 @@ tail -F /app/apache/logs/access_log &
 export LD_LIBRARY_PATH=/php/ext
 export PHP_INI_SCAN_DIR=/www
 echo "Launching apache"
-exec ./apache/bin/httpd -DNO_DETACH
+exec ~/apache/bin/httpd -DNO_DETACH
 EOF
 
 chmod +x boot.sh
