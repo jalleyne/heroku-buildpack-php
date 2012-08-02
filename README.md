@@ -26,6 +26,10 @@ Pre-compiling binaries
     make install
     cd ..
     
+
+	#vulcan build -c "./configure --enable-rewrite --enable-proxy --enable-proxy-http && make && make install" -o apache-2.2.22.tar.gz -p=/app/apache -v
+
+
     # php
     curl -LO http://us2.php.net/get/php-5.3.6.tar.gz/from/us.php.net/mirror
     mv mirror php.tar.gz
@@ -35,6 +39,10 @@ Pre-compiling binaries
     make
     make install
     cd ..
+
+
+	#vulcan build -c "./configure --prefix=/app/php --with-apxs2=/app/apache/bin/apxs --with-mysql --with-pdo-mysql --with-pgsql --with-pdo-pgsql --with-iconv --with-gd --with-curl=/usr/lib --with-config-file-path=/app/php --enable-soap=shared --with-openssl --with-zlib" -o php-5.3.6.tar.gz -p=/app/php -v
+
     
     # php extensions
     mkdir /app/php/ext
